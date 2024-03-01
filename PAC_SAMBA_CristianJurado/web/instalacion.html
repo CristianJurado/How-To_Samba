@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <meta name="author" content="Cristian Jurado López" />
+    <title>HOW-TO SAMBA</title>
+</head>
+<body>
+    <!--Enlaces hacemos uso de una etiqueta llamada ( a ) -->
+    <a href="vitual-box.html">Configuración Red</a> | <a href="instalacion.html">Instalación</a> | <a href="configuracion.html">Configuración</a> | <a href="prueba.html">Prueba</a>
+    <h1 id="nombre" >HOW-TO SAMBA</h1>
+    <h2>Instalación</h2>
+
+    <div>
+        <h3>Paso 1: </h3>
+        <p>En la máquina virtual de ubuntu abrimos la terminal y nos logeamos como su que es el usuario root.
+        Un identificativo de que estamos desde ese usuario es la # que aparece al final de la ruta.
+        Ponemos el comando apt install samba y pulsamos ENTER empezara a instalarse hasta que nos pedira confirmación donde pulsamos y.
+        </p>
+        <img src="../img/1.PNG">
+    </div>
+
+    <div>
+        <h3>Paso 2: </h3>
+        <p>Una vez instalado, creamos el usuario donde se encontrara nuestra carpeta compartida. Con el comando adduser se crean usuarios desde la terminal de ubuntu.
+        En nuestro caso lo llamaremos winuser, le pondremos una contraseña y pulsamos ENTER hasta que nos pregunte si la informacion es correcta donde pulsaremos y. 
+        </p>
+        <img src="../img/2.PNG">
+    </div>
+
+    <div>
+        <h3>Paso 3: </h3>
+        <p>Con el comando su winuser nos cambiamos al usuario donde crearemos la carpeta compartida con el comando mkdir. Le daremos los permisos de lectura, escritura y ejecución,
+            con el comando chmod 777 donde cada digito significa los diferetes permisos en binario. Una vez realizado usamos el comando ls -l para comprobar que se han aplicado los cambios.
+        </p>
+        <img src="../img/3.PNG">
+    </div>
+    <br>
+    <div>
+        <a href="vitual-box.html">Volver</a> <a class="derecha" href="configuracion.html">Continuar</a>
+    </div>
+
+    <footer>
+        <p class="marcaAgua">Cristian Jurado López</p>
+      </footer>
+</body>
+</html>

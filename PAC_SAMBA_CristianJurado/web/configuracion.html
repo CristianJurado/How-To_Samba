@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>HOW-TO SAMBA</title>
+    <meta name="author" content="Cristian Jurado López" />
+</head>
+<body>
+    <a href="vitual-box.html">Configuración Red</a> | <a href="instalacion.html">Instalación</a> | <a href="configuracion.html">Configuración</a> | <a href="prueba.html">Prueba</a>
+    <h1 id="nombre" >HOW-TO SAMBA</h1>
+    <h2>Configuración</h2>
+
+    <div>
+        <h3>Paso 1: </h3>
+        <p>Desde el usuario root y con el comando nano abrimos el archivo de configuración de samba que se encuentra 
+        </p>
+        <img src="../img/4.PNG">
+    </div>
+
+    <div>
+        <h3>Paso 2: </h3>
+        <p>Bajamos al final del archivo y escribimos lo siguiente:<br>
+            [Compartida]<br>
+            path=/home/winuser/compartida<br>
+            browseable=yes<br>
+            read only=no<br>
+            valid users=winuser <br><br>
+            En estas líneas definimos la ruta donde se encuentra el archivo, que sea navegable para poder encontrarla en la red, 
+            solo lectura no por que queremos que el usuario pueda escribir y ejecutar y por ultimo definimos el usuario valido que en nuestro caso sera winuser.
+        </p>
+        <img src="../img/5.PNG">
+    </div>
+
+    <div>
+        <h3>Paso 3: </h3>
+        <p>Siendo usuario root añadimos a winuser a los usuarios de samba con el comando smbpasswd -a winuser asignandole una contraseña.
+            
+        </p>
+        <img src="../img/6.PNG">
+    </div>
+
+    <div>
+        <h3>Paso 3: </h3>
+        <p>Nos movemos hasta la carpeta compartida y con el comando touch creamos un archivo llamado archivo-linux.
+            Hacemos un ls -l para comprobar que se ha creado correctamente
+        </p>
+        <img src="../img/7.PNG">
+    </div>
+
+    <div>
+        <h3>Paso 4: </h3>
+        <p>Con el comando systemctl restart smbd.service reseteamos el servicio de samba desde root.
+        </p>
+        <img src="../img/8.PNG">
+    </div>
+
+    <div>
+        <h3>Paso 5: </h3>
+        <p>Con el comando ip a obtenemos la ip de nuestro equipo.
+        </p>
+        <img src="../img/9.PNG">
+    </div>
+
+    <br>
+    <div>
+        <a href="instalacion.html">Volver</a> <a class="derecha" href="prueba.html">Continuar</a>
+    </div>
+
+    <footer>
+        <p class="marcaAgua">Cristian Jurado López</p>
+      </footer>
+</body>
+</html>
